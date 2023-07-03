@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bài 9-10</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h2 class="text-center">Log In</h2>
+      <div class="input-group">
+        <label for="account">Tài khoản:</label>
+        <input type="text" id="account" required />
+        <span class="error-message" id="account-error"></span>
+      </div>
+      <div class="input-group">
+        <label for="fullname">Họ tên:</label>
+        <input type="text" id="fullname" required />
+        <span class="error-message" id="fullname-error"></span>
+      </div>
+      <div class="input-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+        <span class="error-message" id="email-error"></span>
+      </div>
+      <div class="input-group">
+        <label for="password">Mật khẩu:</label>
+        <input type="password" id="password" required />
+        <span class="error-message" id="password-error"></span>
+      </div>
+      <div class="input-group">
+        <label for="start-date">Ngày làm:</label>
+        <input type="date" id="start-date" required />
+        <span class="error-message" id="start-date-error"></span>
+      </div>
+      <div class="input-group">
+        <label for="salary">Lương cơ bản:</label>
+        <input
+          type="number"
+          id="salary"
+          min="1000000"
+          max="20000000"
+          required
+        />
+        <span class="error-message" id="salary-error"></span>
+      </div>
+      <div class="input-group">
+        <label for="position">Chức vụ:</label>
+        <select id="position" required>
+          <option value="">Chọn chức vụ</option>
+          <option value="manager">Giám đốc</option>
+          <option value="supervisor">Trưởng Phòng</option>
+          <option value="employee">Nhân Viên</option>
+        </select>
+        <span class="error-message" id="position-error"></span>
+      </div>
+      <div class="input-group">
+        <label for="hours-worked">Giờ làm trong tháng:</label>
+        <input type="number" id="hours-worked" min="80" max="200" required />
+        <span class="error-message" id="hours-worked-error"></span>
+      </div>
+      <div class="input-group">
+        <label for="total-salary">Tổng lương:</label>
+        <input type="text" id="total-salary" disabled />
+      </div>
+      <div class="input-group">
+        <label for="employee-type">Loại nhân viên:</label>
+        <input type="text" id="employee-type" disabled />
+      </div>
+      <button class="button" onclick="calculateTotalSalary()">
+        Tính tổng lương
+      </button>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
