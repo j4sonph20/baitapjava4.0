@@ -91,7 +91,56 @@
       <button class="button" onclick="calculateTotalSalary()">
         Tính tổng lương
       </button>
+      <hr>
+
+      <div class="input-group">
+        <button class="button delete-button" onclick="clearInputs()">
+          Xóa nhân viên
+        </button>
+      </div>
+
+      <div class="input-group">
+        <h3>Cập nhật nhân viên</h3>
+        <label for="update-account">Tài khoản:</label>
+        <input type="text" id="update-account" required />
+        <span class="error-message" id="update-account-error"></span>
+
+        <!-- Các trường cập nhật khác -->
+
+        <button class="button update-button" onclick="updateEmployee()">
+          Cập nhật
+        </button>
+      </div>
+
+      <div class="input-group">
+        <h3>Tìm nhân viên theo loại</h3>
+        <label for="employee-type-select">Loại nhân viên:</label>
+        <select id="employee-type-select">
+          <option value="">Chọn loại nhân viên</option>
+          <option value="Xuất sắc">Xuất sắc</option>
+          <option value="Giỏi">Giỏi</option>
+          <option value="Khá">Khá</option>
+          <option value="Trung bình">Trung bình</option>
+        </select>
+
+        <button class="button search-button" onclick="searchEmployees()">
+          Tìm kiếm
+        </button>
+      </div>
+
+      <div id="employee-list"></div>
+      <button class="button" onclick="addEmployee()">Thêm nhân viên</button>
     </div>
+    <div class="input-group">
+      <label for="hours-worked">Giờ làm trong tháng:</label>
+      <input type="number" id="hours-worked" min="80" max="200" required />
+      <span class="error-message" id="hours-worked-error"></span>
+    </div>
+    <div class="input-group">
+      <label for="evaluation">Đánh giá:</label>
+      <span id="evaluation" class="evaluation-label"></span>
+    </div>
+    
 
     <script src="./index.js"></script>
   </body>
